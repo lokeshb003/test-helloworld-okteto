@@ -1,0 +1,10 @@
+name: python3-app
+
+deploy:
+  - kubectl apply -f deployment.yaml
+
+dev:
+  frontend:
+    command: ["python3", "helloworld.py"]
+    sync:
+      - .:/root/helloworld
