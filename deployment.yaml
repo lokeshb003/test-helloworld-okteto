@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: updated-portfolio-deployment
+  name: python-app-deployment
 spec:
   replicas: 1
   selector:
@@ -13,5 +13,5 @@ spec:
         app: python-app
     spec:
       containers:
-      - name: python-app
+      - name: python-app-container
         image: ghcr.io/lokeshb003/test-helloworld-okteto:master
